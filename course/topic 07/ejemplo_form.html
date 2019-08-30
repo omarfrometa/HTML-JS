@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<title>Formulario</title>
+	<style>
+		body{font-family: Arial; background-color: #256999; box-sizing: border-box; padding: 100px;}
+		form{
+			background-color: white;
+			border-radius: 0 0 3px 3px;
+			color: #999;
+			font-size: 0.8em;
+			padding: 20px;
+			margin: 0 auto;
+			width: 300px;
+		}
+		input, textarea{
+			border: 0;
+			outline: none;
+			width: 280px;
+		}
+		.field{
+			border: solid 1px #ccc;
+			border-radius: 0 4px 4px 0; 
+			padding: 10px;
+			width: 240px;
+		}
+		.field:focus{
+			border-color: #18A383;
+		}
+		.center-content{
+			text-align: center;
+		}
+		.field-container div{
+			display: inline-block;
+			vertical-align: top;
+		}
+		.field-container i{
+			background-color: #eee;
+			border-radius: 4px 0 0 4px; 
+			color: #888;
+			padding: 10px 10px 11px 10px;
+			border: solid 1px #ccc;
+			max-height: 35px;
+			margin-right: -5px;
+			vertical-align: top;
+		}
+		.active{
+			background-color: white !important;
+		}
+		.columns >div{
+			width: 50%;
+			display: inline-block;
+			vertical-align: top;
+			margin-right: -4px;
+		}
+		.columns .field{
+			width: 80px;
+		}
+		
+        .btn{
+	border-radius: 3px;
+	display: inline-block;
+	padding: 20px 15px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.3); 
+}
+
+.btn-green{
+	color: white;
+	background-color: #3CC93F;
+}
+
+.btn-black{
+	color: #ddd;
+	background-color: #222;
+}
+.btn-green:hover{
+	background-color: #37B839;	
+}
+.btn-green:active{
+	background-color: #29962A;
+}
+	</style>
+</head>
+<body>
+	
+	<div id="formularios">
+            <form action="" id="form_session">
+                    <h2 style="text-align: center">FORMULARIO DE REGISTRO</h1>
+                    
+                        <div class="columns">
+                            <div class="field-container">
+                                <p> Nombre:</p>
+                                <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>	
+                                <input type="text" class="field" placeholder="Omar"> <br/>
+                            </div>
+                            <div class="field-container">
+                                <p> Apellido:</p>
+                                <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>	
+                                <input type="text" class="field" placeholder="Frometa..."> <br/>
+                            </div>
+                        </div>
+
+                        <p>Fecha de Nacimiento:</p>
+                        <div class="field-container">
+                            <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>	
+                            <input type="date" class="field"> <br/>
+                        </div>
+
+                        <p>Pais:</p>
+                        <div class="field-container">
+                            <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>	
+                            <select class="field" style="height: 50px">
+                                <option>-- SELECCIONE --</option>
+                                <option>Republica Dominicana</option>
+                                <option>Estados Unidos</option>
+                                <option>España</option>
+                                <option>Otro</option>
+                            </select> <br/>
+                        </div>
+
+                        <div class="columns">
+                                <div class="field-container">
+                                    <p> Masculino:</p>
+                                    <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>	
+                                    <input type="radio" class="field" name="sex"> <br/>
+                                </div>
+                                <div class="field-container">
+                                    <p> Femenino:</p>
+                                    <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>	
+                                    <input type="radio" class="field" name="sex"> <br/>
+                                </div>
+                            </div>
+                       <br/>
+                       <h4>Credenciales</h4>
+                            <hr/>
+                        <p>Usuario:</p>
+                        <div class="field-container">
+                            <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>	
+                            <input type="text" class="field" placeholder="ofrometa"> <br/>
+                        </div>
+            
+                        <p>Correo electrónico:</p>
+                        <div class="field-container">
+                            <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>	
+                            <input type="text" class="field" placeholder="omar.frometa@fvtech.net@"> <br/>
+                        </div>
+
+                        <div class="columns">
+                            <div class="field-container">
+                                <p> Clave:</p>
+                                <i class="fa fa-building fa-lg" aria-hidden="true"></i>	
+                                <input id="clave1" type="password" class="field" placeholder="*******"> <br/>
+                            </div>
+                            <div class="field-container">
+                                <p> Repetir Clave:</p>
+                                <i class="fa fa-phone fa-lg" aria-hidden="true"></i>	
+                                <input id="clave2" type="password" class="field" placeholder="*******"> <br/>
+                            </div>
+            
+                        </div>
+                        <p class="center-content">
+                            <input type="submit" class="btn btn-green" value="Crear cuenta">
+                        </p>
+            </form>	
+        </fieldset>
+	</div>
+</body>
+</html>
